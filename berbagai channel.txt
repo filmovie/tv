@@ -1,1 +1,0 @@
-https://www.googleapis.com/drive/v3/files/tempeldisini?alt=media&key=AIzaSyDdoetN4aDmDBc6Y11CUGK4nhZ0pvZbXOw
