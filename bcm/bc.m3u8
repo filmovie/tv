@@ -1,0 +1,44 @@
+#EXTM3U
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/0UIyUAWrhenCrQ9XviGguVhfADP5rGqcEmYipLkO9stD6bzVdjv6lbqZKLauACnZeuBJAhxp0fsSZgymaopN4D6V9Fpo6JjiuBkoaQ=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", trans7
+/storage/emulated/0/bc/trans7.ts
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/MTBbrulU5zVlmJTK1xpDTUsIFH21ofiVFmqvwnqCa7YHBy2cM-rgi4AGkuPZEHF5-HFW1yE5_u6P5xuuh5T-sO4VasK2_DY66YbFfUo=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", transtv
+/storage/emulated/0/bc/trans.tv.ts
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/w6dh3W0c_SDrV4pBLnvFDKhxGQJvxCMSF_HibDtbUfKcXVt8G1KTsbo0Hvkp1OYoMfZl1DE5PCea-pLc6Gd8x718zTsvyfM_UY7L=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", cnn.indonesia
+/storage/emulated/0/bc/cnn.indonesia.ts
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/d8Zs8-kljLAYiq0w4f_pAj4t_mmbBdPNmKmC-XY5hXostQ5ihMH2jRO2XjUlCNQS8Ai4AQyRjsc36Vdpcu4ylcvPxjD-i6QBhNqJ=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", cnbc indonesia
+/storage/emulated/0/bc/cnbc.indonesia.ts
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/dZFDNGdlbnYSp4PG1BCcx-UnjkiUlTuyrlURTFRKtLagdQc7d_kDNh2iAxQb9rwzbPbZm7FUztXQxM3zV8tPcDq0unUcCKLCQ7AL=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", berita satu
+/storage/emulated/0/bc/berita.satu.ts
+#EXTINF: -1 tvg-logo="https://www.mediafire.com/convkey/284c/4uvovjprfw8qnpb4g.jpg" group-title="tivi", mu tv
+/storage/emulated/0/bc/mutv.ts
+#EXTINF: -1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkmZbbM9SFO9LXr3ej_YIaWfsIMdfzPSDCOw&usqp=CAU" group-title="tivi", spo tv
+/storage/emulated/0/bc/spotv.ts
+#fm
+#EXTINF:-1 tvg-logo="https://image.tmdb.org/t/p/w500/2Makktg15hCXNv4TZMJjPMBz1BZ.jpg" group-title="filmovie ",suzzana.titisan.dewi.ular.(1990)
+/storage/emulated/0/bc/suzzana.titisan.dewi.ular.(1990).ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNeNXRMH3pmhzwdw-vMTz_4bx8Hvo_ELRwfw&usqp=CAU" group-title="filmovie ",ron's.gone.wrong.(2021).dub
+/storage/emulated/0/bc/ron's.gone.wrong.(2021).dub.ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXALc5GAk48G4SozGR0bPTCcw6ZwZIY5pU8Q&usqp=CAU" group-title="filmovie ",rumah.hantu.pasar.malam.(2012)
+https://dl.dropbox.com/s/cx3jrtch3fzygmu/rumah.hantu.pasar.malam.%282012%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrY4hOM9cQ5o31PEmsYGmVBL0xfDYEa8i3kg&usqp=CAU" group-title="filmovie ",shaolin.soccer.(2001)
+https://dl.dropbox.com/s/ussn49obq6p3sub/shaolin.soccer.%282001%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrx4-K32Ph3RPXTWeC-1GbaZqYzYnrLYMsA&usqp=CAU" group-title="filmovie ",wiro.sableng.212.warrior.(2018)
+https://dl.dropbox.com/s/g8v7zdxnamr8sq8/wiro.sableng.212.warrior.%282018%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRozYkloKzlWM95DLOzOZv9qWct3hqp3n-gCA&usqp=CAU" group-title="filmovie ",hulk-(2008)
+https://dl.dropbox.com/s/9fnyh81w0dmbpi7/hulk-%282008%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsL18DuIpez3CbmQuMsMJI-RKIEMrBuma2rg&usqp=CAU" group-title="filmovie ",barbarian.(2022)
+/storage/emulated/0/bc/barbarian.(2022).ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXEy6uVczWWonjirkW_KrW3SAkpytEFwH5gQ&usqp=CAU" group-title="filmovie ",the.tomorrow.war.(2021)
+/storage/emulated/0/bc/the.tomorrow.war.(2021).ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYsLshbETylBsnxF-OqF4I96pQ4SA1le349g&usqp=CAU" group-title="filmovie ",depan.bisa.belakang.bisa.(1987)
+/storage/emulated/0/bc/depan.bisa.belakang.bisa.(1987).ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBRGFgC0HFoWs3FPOKIlFURy1fMN4JV_v-uQ&usqp=CAU" group-title="filmovie ",slayers (2022)
+/storage/emulated/0/bc/slayers (2022).ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyfC-Ouiwu8MOcfTD3jHUUe91Gv1ZHnWVSAw&usqp=CAU" group-title="filmovie ",avatar.the.last.airbender.(2010)
+/storage/emulated/0/bc/avatar.the.last.airbender.(2010).ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSyU9v_DrFA6QMChav3BlwDYEn3gGjG9RZ3w&usqp=CAU" group-title="filmovie ",danur.2.maddah.(2018)
+https://dl.dropbox.com/s/9169lqmcslr0763/danur.2.maddah.%282018%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBEOX4_XwrXooheCxhG89lD6-wnTGBPvHLhQ&usqp=CAU" group-title="filmovie ",ghost.rider.(2007)
+/storage/emulated/0/bc/ghost.rider.(2007).ts
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdlG4doUai-MqJSuichfKdtpyNiros9W_Fwg&usqp=CAU" group-title="filmovie ",danur.(2017)
+/storage/emulated/0/bc/danur.(2017).ts
