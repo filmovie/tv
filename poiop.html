@@ -1,302 +1,62 @@
-<!DOCTYPE html>
-<html xmlns="https://rawcdn.githack.com/filmovie/tv/61240fb92ef30b5c594255f8a94649cbeeb033b1/vod/Hichki_(2018).html">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>byC</title>
-<link rel="icon" type="image/png" href="/asset/default/img/favicon.ico?v=1553817714" />
-<style>
-body{
-    font-family: Arial,Helvetica,sans-serif;
-	width:100%;
-	height:100%;
-	background-color:#000;
-	overflow:hidden;
-	position:fixed;
-	border:0;
-	margin:0;
-	padding:0;
-}
-#vstr {
-	position:absolute;
-	min-width:100%;
-	min-height:100%;
-	z-index: 10;
-}
-#loading, #resume {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-#loading {
-  z-index: 11;
-}
-#resume {
-  z-index: 12;
-}
-.pop-wrap {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-.pop-main {
-    display: table-cell;
-    vertical-align: middle;
-}
-.pop-html {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-.pop-block {
-    display: inline-block;
-    position: relative;
-}
-.myConfirm {
-    max-width: 260px;
-    max-height: 160px;
-    padding: 3px;
-    padding-bottom: 0px;
-    border-radius: 3px;
-    font-size: 14px;
-    line-height: 1.3em;
-    background-color: #333333;
-    color: #f2f2f2;
-}
-.button {
-    border-width: 0;
-    padding: 5px 15px;
-    line-height: 1.5;
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-size: 80%;
-    font-weight: 700;
-    margin: 5px 5px 5px 0;
-    cursor: pointer;
-    outline: none;
-    background-color: #565656;
-    color: #ffffff;
-}
-@-moz-keyframes rotate-loading {
-    0% {
-        transform: rotate(0);
-        -ms-transform: rotate(0);
-        -webkit-transform: rotate(0);
-        -o-transform: rotate(0);
-        -moz-transform: rotate(0)
-    }
-    100% {
-        transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        -moz-transform: rotate(360deg)
-    }
-}
-@-o-keyframes rotate-loading {
-    0% {
-        transform: rotate(0);
-        -ms-transform: rotate(0);
-        -webkit-transform: rotate(0);
-        -o-transform: rotate(0);
-        -moz-transform: rotate(0)
-    }
-    100% {
-        transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        -moz-transform: rotate(360deg)
-    }
-}
-@-webkit-keyframes rotate-loading {
-    0% {
-        transform: rotate(0);
-        -ms-transform: rotate(0);
-        -webkit-transform: rotate(0);
-        -o-transform: rotate(0);
-        -moz-transform: rotate(0)
-    }
-    100% {
-        transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        -moz-transform: rotate(360deg)
-    }
-}
-@keyframes rotate-loading {
-    0% {
-        transform: rotate(0);
-        -ms-transform: rotate(0);
-        -webkit-transform: rotate(0);
-        -o-transform: rotate(0);
-        -moz-transform: rotate(0)
-    }
-    100% {
-        transform: rotate(360deg);
-        -ms-transform: rotate(360deg);
-        -webkit-transform: rotate(360deg);
-        -o-transform: rotate(360deg);
-        -moz-transform: rotate(360deg)
-    }
-}
-@-moz-keyframes loading-text-opacity {
-    0%, 100%, 20% {
-        opacity: 0
-    }
-    50% {
-        opacity: 1
-    }
-}
-@-o-keyframes loading-text-opacity {
-    0%, 100%, 20% {
-        opacity: 0
-    }
-    50% {
-        opacity: 1
-    }
-}
-@-webkit-keyframes loading-text-opacity {
-    0%, 100%, 20% {
-        opacity: 0
-    }
-    50% {
-        opacity: 1
-    }
-}
-@keyframes loading-text-opacity {
-    0%, 100%, 20% {
-        opacity: 0
-    }
-    50% {
-        opacity: 1
-    }
-}
-.loading-ani,
-.loading-container {
-    height: 100px;
-    position: relative;
-    width: 100px;
-    border-radius: 100%
-}
-.loading-container {
-    margin: 40vh auto
-}
-.loading-ani {
-    border: 2px solid transparent;
-    border-color: transparent #fff transparent #FFF;
-    -moz-animation: rotate-loading 1.5s linear 0s infinite normal;
-    -moz-transform-origin: 50% 50%;
-    -o-animation: rotate-loading 1.5s linear 0s infinite normal;
-    -o-transform-origin: 50% 50%;
-    -webkit-animation: rotate-loading 1.5s linear 0s infinite normal;
-    -webkit-transform-origin: 50% 50%;
-    animation: rotate-loading 1.5s linear 0s infinite normal;
-    transform-origin: 50% 50%
-}
-.loading-container:hover .loading-ani {
-    border-color: transparent #E45635
-}
-.loading-container .loading-ani,
-.loading-container:hover .loading-ani {
-    -webkit-transition: all .5s ease-in-out;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
-    -o-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out
-}
-.loading-container .loading-text {
-    -moz-animation: loading-text-opacity 2s linear 0s infinite normal;
-    -o-animation: loading-text-opacity 2s linear 0s infinite normal;
-    -webkit-animation: loading-text-opacity 2s linear 0s infinite normal;
-    animation: loading-text-opacity 2s linear 0s infinite normal;
-    color: #fff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    margin-top: 45px;
-    opacity: 0;
-    position: absolute;
-    text-align: center;
-    text-transform: uppercase;
-    top: 0;
-    width: 100px
-}
-.jw-rightclick-link.jw-info-overlay-item, .jw-rightclick-item.jw-featured {
-    display: none !important;
-}
-.jw-button-container .jw-settings-sharing, .jw-button-container .jw-icon-cc {
-    display: none !important;
-}
-.jw-rightclick-link {
-    color: #d2d2d2 !important;
-}
-.jw-rightclick-link span {
-    color: #fff !important;
-}
-.jw-svg-icon-download {
-    height: 16px !important;
-    width: auto !important;
-}
-.jw-svg-icon-qswitch {
-    width: auto !important;
-}
-.jw-button-container .jw-logo-button {
-    margin-right: 10px;
-}
-</style>
-<script>
-var USER_ID = '366113';
-function devtoolIsOpening() {
-    console.clear();
-    let before = new Date().getTime();
-    debugger;
-    let after = new Date().getTime();
-    if (after - before > 200) {
-        document.write(" Dont open Developer Tools. ");
-        window.location.replace("https://www.google.de");
-    }
-    setTimeout(devtoolIsOpening, 100);
-}
-devtoolIsOpening();
-</script>
-</head>
-<body>
-<div id="vstr"></div>
-<div id="loading">
-    <div class="loading-container">
-        <div class="loading-ani"></div>
-        <div class="loading-text">loading</div>
-    </div>
-</div>
-<!-- Javascript -->
-<script src="/asset/default/player/base.js?v=1595607720"></script>
-<script type="text/javascript">
-/* global Ya, USER_ID */
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter49788082 = new Ya.Metrika2({
-                    id:49788082,
-                    accurateTrackBounce:true,
-                    params:{owner:USER_ID}
-                });
-            } catch(e) { }
-        });
-
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = "https://mc.yandex.ru/metrika/tag.js";
-
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks2");
-</script>
-</body>
-</html>
+#EXTM3U
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/0UIyUAWrhenCrQ9XviGguVhfADP5rGqcEmYipLkO9stD6bzVdjv6lbqZKLauACnZeuBJAhxp0fsSZgymaopN4D6V9Fpo6JjiuBkoaQ=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", trans7
+https://dl.dropbox.com/s/grayypcdq9ut893/trans7.m3u8?dl=1
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/MTBbrulU5zVlmJTK1xpDTUsIFH21ofiVFmqvwnqCa7YHBy2cM-rgi4AGkuPZEHF5-HFW1yE5_u6P5xuuh5T-sO4VasK2_DY66YbFfUo=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", transtv
+https://dl.dropbox.com/s/7psyc50e5ksw7id/transtv.m3u8?dl=1
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/w6dh3W0c_SDrV4pBLnvFDKhxGQJvxCMSF_HibDtbUfKcXVt8G1KTsbo0Hvkp1OYoMfZl1DE5PCea-pLc6Gd8x718zTsvyfM_UY7L=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", cnn.indonesia
+https://dl.dropbox.com/s/zsrw27itra13sqs/cnn%20indonesia.m3u8?dl=1
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/d8Zs8-kljLAYiq0w4f_pAj4t_mmbBdPNmKmC-XY5hXostQ5ihMH2jRO2XjUlCNQS8Ai4AQyRjsc36Vdpcu4ylcvPxjD-i6QBhNqJ=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", cnbc indonesia
+https://dl.dropbox.com/s/9x67u6d5boix1su/cnbc%20indonesia.m3u8?dl=1
+#EXTINF: -1 tvg-logo="https://lh3.googleusercontent.com/dZFDNGdlbnYSp4PG1BCcx-UnjkiUlTuyrlURTFRKtLagdQc7d_kDNh2iAxQb9rwzbPbZm7FUztXQxM3zV8tPcDq0unUcCKLCQ7AL=w360-h684-rw-sm-pa-nu-v0" group-title="tivi", berita satu
+https://dl.dropbox.com/s/ua3ebt52fyy01v9/berita.satu.m3u8?dl=1
+#EXTINF: -1 tvg-logo="https://www.mediafire.com/convkey/284c/4uvovjprfw8qnpb4g.jpg" group-title="tivi", mu tv
+https://dl.dropbox.com/s/w9lwzne41o9etfz/mutv.m3u8?dl=1
+#EXTINF: -1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkmZbbM9SFO9LXr3ej_YIaWfsIMdfzPSDCOw&usqp=CAU" group-title="tivi", spo tv
+https://dl.dropbox.com/s/3o7pye7ej6ltakg/spotv.m3u8?dl=1
+#fm
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS46c4y2tqcdNKYM28qjSC2Zc4JBNZkQU6gLg&usqp=CAU" group-title="cardcaptor sakura ",eps11
+https://dl.dropbox.com/s/pincyb4gu284s21/11%20Cardcaptor%20Sakura%20dubbing.mp4
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS46c4y2tqcdNKYM28qjSC2Zc4JBNZkQU6gLg&usqp=CAU" group-title="cardcaptor sakura ",eps12
+https://dl.dropbox.com/s/3x2oi6gf2xii8uj/12%20Cardcaptor%20Sakura%20dubbing.mp4
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaa96s5KX4NiqDfWkbfFnWQKq8D9WxZUBI1Q&usqp=CAU" group-title="filmovie ",THE.LORD.OF.THE.RINGS.THE.RETURN.OF.THE.KING.(2003)
+https://dl.dropbox.com/s/0sx1cwspu5bf7jx/THE.LORD.OF.THE.RINGS.THE.RETURN.OF.THE.KING.%282003%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSNQhLFbHDXy478WpDOpp1SUsLXfOXFqzsZA&usqp=CAU" group-title="filmovie ",BATMAN.AND.SUPERMAN.BATTLE.OF.THE.SUPER.SONS.(2022)
+https://dl.dropbox.com/s/30clptr8bll8df1/BATMAN.AND.SUPERMAN.BATTLE.OF.THE.SUPER.SONS.%282022%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOuTMVDzXA_JKHrabwBkMB-OOU_wqGJOjwpA&usqp=CAU" group-title="filmovie ",train.to.busan.(2016)
+https://dl.dropbox.com/s/1kjphnrt85fapgd/train.to.busan.%282016%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKsvnvLAC2nQGcYqwipq4w_eut-eD4_QOgzg&usqp=CAU" group-title="filmovie ",chip'n.dale_rescue.rangers.(2022).dub
+https://dl.dropbox.com/s/pxx5uor16r7ssgp/chip%27n.dale_rescue.rangers.%282022%29.dub.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ67vI-fprNooOFneok9s8n7JMw79nsCDiN3g&usqp=CAU" group-title="filmovie ",cyber.hell.exposing.an.internet.horror.(2022)
+https://dl.dropbox.com/s/r9r8veaxysktoly/cyber.hell.exposing.an.internet.horror.%282022%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiuBvJrYSvuIanjb4JEoxZ-bxshMmUDa1MkA&usqp=CAU" group-title="filmovie ",fighting.for.the.motherland.1162(2020)
+https://dl.dropbox.com/s/oet05jp1p27smr5/fighting.for.the.motherland.1162%282020%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEd6jcFKteIk9k4Sa7aXQ3vLh-QqA62GDXdw&usqp=CAU" group-title="filmovie ",shang.chi.and.the.legend.of.the.ten.rings.(2021).dub
+https://dl.dropbox.com/s/41jsd6in0ttlm9d/shang.chi.and.the.legend.of.the.ten.rings.%282021%29.dub.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQraB3mJhOKgAXissdGDYdzDa8rcvVRtdNUqQ&usqp=CAU" group-title="filmovie ",hantu.jembatan.ancol.(2008)
+https://dl.dropbox.com/s/z3rrki9cde6eu26/hantu.jembatan.ancol.%282008%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwjST5m1fi4PBP9nH4kdaURJis87LPnZhraw&usqp=CAU" group-title="filmovie ",pengkhianatan.g30s_s.pki.(1984)
+https://dl.dropbox.com/s/1qrepk325mfh9ub/pengkhianatan.g30s_s.pki.%281984%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB70n03s3JuQ9AtUHmfG-iK4E_ZA03TBogJA&usqp=CAU" group-title="filmovie ",insidious.(2010)
+https://dl.dropbox.com/s/gu5o1icbhrzofk3/insidious.%282010%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfFe90x3BwOZJv1NfYoN-WoEAg_Ybam6irfA&usqp=CAU" group-title="filmovie ",kung.fu.dunk.(2008)
+https://dl.dropbox.com/s/aaanz4frcawygu6/kung.fu.dunk.%282008%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUeU2fWqfPoohuUANcG-od3_m0okAQmDjlCQ&usqp=CAU" group-title="filmovie ",jungle.cruise.(2021).dub
+https://dl.dropbox.com/s/yeqz91oolyhw1jm/jungle.cruise.%282021%29.dub.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwfyMg8vGbJgoqSYGm8Ussv2Cr9pQWD-O4Pg&usqp=CAU" group-title="filmovie ",avatar.(2009).extended
+https://dl.dropbox.com/s/luil1i0ylu6hhnn/avatar.%282009%29.extended.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYEmsix5zRg4eHaHDyLr81j5zkA8muBmsJTA&usqp=CAU" group-title="filmovie ",anacondas.the.hunt.for.the.blood.orchid.(2004)
+https://dl.dropbox.com/s/ol15914w5akawlq/anacondas.the.hunt.for.the.blood.orchid.%282014%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://www.mediafire.com/convkey/df77/t9mdk4nmghhwdfn4g.jpg" group-title="filmovie ",suzzana.titisan.dewi.ular.(1990)
+https://dl.dropbox.com/s/7h7jzb3jczkkjsj/suzzana.titisan.dewi.ular.%281990%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNeNXRMH3pmhzwdw-vMTz_4bx8Hvo_ELRwfw&usqp=CAU" group-title="filmovie ",ron's.gone.wrong.(2021).dub
+https://dl.dropbox.com/s/rc5rg12qlfxkh7r/ron%27s.gone.wrong.%282021%29.dub.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXALc5GAk48G4SozGR0bPTCcw6ZwZIY5pU8Q&usqp=CAU" group-title="filmovie ",rumah.hantu.pasar.malam.(2012)
+https://dl.dropbox.com/s/cx3jrtch3fzygmu/rumah.hantu.pasar.malam.%282012%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrY4hOM9cQ5o31PEmsYGmVBL0xfDYEa8i3kg&usqp=CAU" group-title="filmovie ",shaolin.soccer.(2001)
+https://dl.dropbox.com/s/ussn49obq6p3sub/shaolin.soccer.%282001%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUrx4-K32Ph3RPXTWeC-1GbaZqYzYnrLYMsA&usqp=CAU" group-title="filmovie ",wiro.sableng.212.warrior.(2018)
+https://dl.dropbox.com/s/g8v7zdxnamr8sq8/wiro.sableng.212.warrior.%282018%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRozYkloKzlWM95DLOzOZv9qWct3hqp3n-gCA&usqp=CAU" group-title="filmovie ",hulk-(2008)
+https://dl.dropbox.com/s/9fnyh81w0dmbpi7/hulk-%282008%29.m3u8?dl=1
+#EXTINF:-1 tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsL18DuIpez3CbmQuMsMJI-RKIEMrBuma2rg&usqp=CAU" group-title="filmovie ",barbarian.(2022)
+https://dl.dropbox.com/s/aeknr75wnrpodig/barbarian.%282022%29.m3u8?dl=1
